@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <!-- ✅ Internet permission (REQUIRED for ads & APIs) -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_icon7"
+        android:label="Puzzle Game"
+        android:roundIcon="@mipmap/app_icon7"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PuzzleGame">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-7496903880919477~7705178317"/>
+
+
+        <activity
+            android:name="com.zeeshanbhatti.puzzlegame.CategoryActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.zeeshanbhatti.puzzlegame.PuzzleActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="com.zeeshanbhatti.puzzlegame.ShowImageActivity"
+            android:exported="false" />
+
+        <!-- Splash MUST be exported -->
+        <activity
+            android:name="com.zeeshanbhatti.puzzlegame.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.zeeshanbhatti.puzzlegame.MainActivity"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

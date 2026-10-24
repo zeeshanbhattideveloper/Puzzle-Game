@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@mipmap/splash_bg"
+        android:scaleType="centerCrop" />
+
+    <!-- Coins -->
+    <TextView
+        android:id="@+id/txtCoins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🪙 0"
+        android:textColor="#FFD700"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/coin_border"
+        android:padding="6dp"/>
+
+    <!-- Daily Rewards Button -->
+    <Button
+        android:id="@+id/btnDailyRewards"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Rewards"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:backgroundTint="#E9D841"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="40dp"/>
+
+    <!-- Welcome Text -->
+    <TextView
+        android:id="@+id/txtWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   Welcome\n         To\nPuzzle Game"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        android:shadowColor="#FAF7F7"
+        android:shadowDx="1"
+        android:shadowDy="1"
+        android:shadowRadius="4"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/logoimage"
+        android:layout_marginBottom="25dp"/>
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/logoimage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/splash"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:scaleType="centerCrop" />
+
+    <!-- Start Game Button -->
+    <Button
+        android:id="@+id/newgame"
+        android:layout_width="200dp"
+        android:layout_height="56dp"
+        android:text="Start Game"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#42C347"
+        android:padding="14dp"
+        android:layout_below="@id/logoimage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp" />
+
+    <!-- Banner Ad at Bottom -->
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-7496903880919477/7610947618"/>
+</RelativeLayout>

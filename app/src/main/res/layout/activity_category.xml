@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/splash_bg"
+    android:padding="16dp">
+
+    <!-- Coins Display -->
+    <TextView
+        android:id="@+id/txtCoins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🪙 0"
+        android:textColor="#FFD700"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:padding="8dp"
+        android:background="@drawable/coin_border"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"/>
+
+    <!-- Header -->
+    <TextView
+        android:id="@+id/headerTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="    Select Category"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Scrollable Categories -->
+    <ScrollView
+        android:id="@+id/scrollCategories"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/headerTitle"
+        android:layout_marginTop="16dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include android:id="@+id/cardCartoons" layout="@layout/category_card_cartoons"/>
+            <include android:id="@+id/cardAnimals" layout="@layout/category_card_animals"/>
+            <include android:id="@+id/cardBirds" layout="@layout/category_card_birds"/>
+            <include android:id="@+id/cardFishes" layout="@layout/category_card_fishes"/>
+            <include android:id="@+id/cardFruits" layout="@layout/category_card_fruits"/>
+            <include android:id="@+id/cardCars" layout="@layout/category_card_cars"/>
+            <include android:id="@+id/cardBikes" layout="@layout/category_card_bikes"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
